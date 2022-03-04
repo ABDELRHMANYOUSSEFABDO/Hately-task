@@ -9,29 +9,29 @@ import Foundation
 import RxSwift
 import RxCocoa
 import UIKit
-class AlbumViewModel{
+class AlbumViewModel:BaseViewModel{
     private var networkClient = NetworkClient()
     private var listAlbum = PublishSubject<[Album]>()
     var listAlbumObsevable : Observable <[Album]> {
         return listAlbum
-
+        
     }
     func getAlbum(id:String){
         self.networkClient.performRequest(MainModelClass.self, router: albumRouter.album(id: id)).subscribe{
             switch $0{
             
             case .success(let response):
-                print("Hi",response.topalbums?.album.count)
-                var arrayalbum :  [Album] = []
-                 response.topalbums?.album.map { arrayalbum.append($0) }
-                for i in  (response.topalbums?.album)! {
-                    arrayalbum.append(i)
+                guard let topAlbum = response.topalbums else{
+                    self.listAlbum.onNext([])
+                    return
                 }
-                self.listAlbum.onNext(arrayalbum)
-            case .failure(_):
+                let albums = Array(topAlbum.album)
+                
+                self.listAlbum.onNext(albums)
+            case .failure(let e):
                 break
             }
-        }
+        }.disposed(by: disposeBag)
     }
 }
 

@@ -24,7 +24,7 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
             
             cell.nameAlbumLabel.text = element.name
             cell.nameArtiesLabel.text = element.artist?.name
-            let imageURl = URL(string: element.url ?? "")
+            let imageURl = URL(string: element.image ?? "")
 
             cell.imageAlbum.sd_setImage(with: imageURl, placeholderImage: #imageLiteral(resourceName: "heart_gray_icon"),options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in
                 // your rest code

@@ -15,10 +15,21 @@ class Topalbums : Object, Codable{
 
 }
 class Album: Object, Codable {
-    @objc dynamic var mbid : String?
-    @objc dynamic var name : String?
-    @objc dynamic var url : String?
+    @objc dynamic var mbid : String? = ""
+    @objc dynamic var name : String? = ""
+    @objc dynamic var url : String? = ""
     @objc dynamic var artist : ArtistClass?
+    var imageList : [ImageAlbum] = []
+    @objc dynamic  var image:String? {
+        if imageList.isEmpty {
+            return ""
+        }
+        return imageList[0].imageLink ?? ""
+    }
+    enum CodingKeys: String, CodingKey {
+        case artist
+        case imageList = "image"
+    }
 }
 
 class ArtistClass: Object, Codable {
@@ -26,4 +37,11 @@ class ArtistClass: Object, Codable {
     @objc dynamic var name : String?
     @objc dynamic var url : String?
 
+}
+class ImageAlbum: Codable {
+      var imageLink: String?
+
+    enum CodingKeys: String, CodingKey {
+        case imageLink = "#text"
+    }
 }
