@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: BaseWireframe<HomeViewModel> {
-
+    @IBOutlet var searchButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchButton.rx.tap.subscribe(onNext: { [weak self] _ in
+                                        let vc =  searchViewController(viewModel: serachViewModel(), coordinator: self?.coordinator as! Coordinator)
+                                        self?.present(vc, animated: true, completion: nil)
+            
+        }).disposed(by: self.disposeBage)
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func tabButton(_ sender: Any) {
-        coordinator.Main.ViewController(for: .search)
+    override func bind(viewModel: HomeViewModel) {
+        searchButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            let vc =  searchViewController(viewModel: serachViewModel(), coordinator: self?.coordinator as! Coordinator)
+            self?.present(vc, animated: true, completion: nil)
+        }).disposed(by: self.disposeBage)
     }
     
 

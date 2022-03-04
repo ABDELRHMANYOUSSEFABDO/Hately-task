@@ -11,4 +11,11 @@ protocol Navigator {
   associatedtype Destionation
     func ViewController(for destionation :Destionation) -> UIViewController
     var coordinator : Coordinator {get}
+    func navigate(to  destionation :Destionation)
+}
+extension Navigator{
+    func navigate(to destionation :Destionation ){
+        let viewController = self.ViewController(for: destionation)
+        coordinator.navigationController.present(viewController, animated: true, completion: nil)
+    }
 }

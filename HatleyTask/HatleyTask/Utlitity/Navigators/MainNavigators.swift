@@ -20,8 +20,8 @@ class MainNavigators:Navigator {
     func ViewController(for destination : Destionation) -> UIViewController {
         switch destination {
         case .search:
-            let View = searchViewController()
-            View.coordinator = coordinator
+            let viewmodel  = serachViewModel()
+            let View = searchViewController(viewModel: viewmodel, coordinator: coordinator)
             return View
         default:
             break

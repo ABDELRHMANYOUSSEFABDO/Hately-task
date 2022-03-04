@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="HatleyTask" customModuleProvider="target">
             <connections>
+                <outlet property="searchButton" destination="BII-eJ-2Io" id="otr-Ec-1lt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="J7B-4w-Gky"/>
             </connections>
         </placeholder>
@@ -26,13 +27,10 @@
                         <constraint firstAttribute="height" constant="50" id="ce7-Cy-8wz"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="tabButton:" destination="-1" eventType="touchUpInside" id="Ha0-nj-jSy"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPinkColor"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BII-eJ-2Io" secondAttribute="trailing" constant="20" id="RLA-zx-NWX"/>
                 <constraint firstItem="BII-eJ-2Io" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="wgq-hE-GUR"/>
@@ -41,8 +39,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

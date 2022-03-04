@@ -28,6 +28,13 @@
 		186730CB27D115F400A89736 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730CA27D115F400A89736 /* ResponseObject.swift */; };
 		186730D127D1164200A89736 /* FailureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730CF27D1164200A89736 /* FailureResponse.swift */; };
 		186730D227D1164200A89736 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730D027D1164200A89736 /* ServiceError.swift */; };
+		1885B0A527D1CAAB00E77423 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0A427D1CAAB00E77423 /* HomeModel.swift */; };
+		1885B0C827D1CEEC00E77423 /* searchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0C727D1CEEC00E77423 /* searchModel.swift */; };
+		1885B0D127D1D13200E77423 /* searchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0D027D1D13200E77423 /* searchViewModel.swift */; };
+		1885B0D727D1D43000E77423 /* searchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0D627D1D43000E77423 /* searchRouter.swift */; };
+		1885B0EE27D2315700E77423 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0ED27D2315700E77423 /* UITableViewCell.swift */; };
+		1885B0F827D2320000E77423 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885B0F627D2320000E77423 /* SearchTableViewCell.swift */; };
+		1885B0F927D2320000E77423 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885B0F727D2320000E77423 /* SearchTableViewCell.xib */; };
 		1EB2A5B6CDB7490A9D450E14 /* Pods_HatleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92C7083D1DCB58DD0371D69 /* Pods_HatleyTask.framework */; };
 		DCC0A2DE831FE1F55250BCF3 /* Pods_HatleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */; };
 		E3DC2A3B32CE734476CBC71A /* Pods_HatleyTask_HatleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA27183C895162AC7776F16C /* Pods_HatleyTask_HatleyTaskUITests.framework */; };
@@ -78,6 +85,13 @@
 		186730CA27D115F400A89736 /* ResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		186730CF27D1164200A89736 /* FailureResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureResponse.swift; sourceTree = "<group>"; };
 		186730D027D1164200A89736 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		1885B0A427D1CAAB00E77423 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		1885B0C727D1CEEC00E77423 /* searchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchModel.swift; sourceTree = "<group>"; };
+		1885B0D027D1D13200E77423 /* searchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewModel.swift; sourceTree = "<group>"; };
+		1885B0D627D1D43000E77423 /* searchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchRouter.swift; sourceTree = "<group>"; };
+		1885B0ED27D2315700E77423 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		1885B0F627D2320000E77423 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1885B0F727D2320000E77423 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA6B2A49790246F89B58338 /* Pods-HatleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-HatleyTaskTests/Pods-HatleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		59AA31C1BF5FCA743FEC97DF /* Pods-HatleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask.release.xcconfig"; path = "Target Support Files/Pods-HatleyTask/Pods-HatleyTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +169,7 @@
 		1867300727D0EC3B00A89736 /* HatleyTask */ = {
 			isa = PBXGroup;
 			children = (
+				1885B0EC27D2313200E77423 /* Extention */,
 				186730AC27D1142000A89736 /* Network */,
 				1867309827D10CA300A89736 /* Constant */,
 				1867307B27D101D200A89736 /* Core */,
@@ -224,6 +239,7 @@
 		1867305727D0F1A100A89736 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1885B0A327D1CA8F00E77423 /* Models */,
 				1867308427D1051200A89736 /* ViewModel */,
 				1867305827D0F1A900A89736 /* ViewController */,
 			);
@@ -242,6 +258,9 @@
 		1867306F27D0F74E00A89736 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				1885B0F527D231E100E77423 /* View */,
+				1885B0CF27D1D11B00E77423 /* ViewModel */,
+				1885B0C627D1CECC00E77423 /* Model */,
 				1867307027D0F75500A89736 /* ViewController */,
 			);
 			path = Search;
@@ -283,6 +302,7 @@
 		186730AC27D1142000A89736 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1885B0D527D1D41400E77423 /* Routers */,
 				186730BE27D1156C00A89736 /* Protocols */,
 				186730AD27D1149400A89736 /* NetworkClient.swift */,
 				186730C927D115F400A89736 /* NetworkModels */,
@@ -307,6 +327,55 @@
 				186730D027D1164200A89736 /* ServiceError.swift */,
 			);
 			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		1885B0A327D1CA8F00E77423 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0A427D1CAAB00E77423 /* HomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1885B0C627D1CECC00E77423 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0C727D1CEEC00E77423 /* searchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1885B0CF27D1D11B00E77423 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0D027D1D13200E77423 /* searchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1885B0D527D1D41400E77423 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0D627D1D43000E77423 /* searchRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		1885B0EC27D2313200E77423 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0ED27D2315700E77423 /* UITableViewCell.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		1885B0F527D231E100E77423 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1885B0F627D2320000E77423 /* SearchTableViewCell.swift */,
+				1885B0F727D2320000E77423 /* SearchTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3390373E9931B09797A10E64 /* Frameworks */ = {
@@ -431,6 +500,7 @@
 				1867301227D0EC3D00A89736 /* Assets.xcassets in Resources */,
 				1867307427D0F76B00A89736 /* searchViewController.xib in Resources */,
 				1867305C27D0F1C700A89736 /* HomeViewController.xib in Resources */,
+				1885B0F927D2320000E77423 /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,16 +628,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1885B0C827D1CEEC00E77423 /* searchModel.swift in Sources */,
 				186730D227D1164200A89736 /* ServiceError.swift in Sources */,
 				186730C527D115B200A89736 /* FeedRouter.swift in Sources */,
 				1867303E27D0ED3B00A89736 /* AppCoordinator.swift in Sources */,
 				186730AE27D1149400A89736 /* NetworkClient.swift in Sources */,
+				1885B0EE27D2315700E77423 /* UITableViewCell.swift in Sources */,
+				1885B0F827D2320000E77423 /* SearchTableViewCell.swift in Sources */,
+				1885B0A527D1CAAB00E77423 /* HomeModel.swift in Sources */,
+				1885B0D127D1D13200E77423 /* searchViewModel.swift in Sources */,
 				186730D127D1164200A89736 /* FailureResponse.swift in Sources */,
 				1867300927D0EC3B00A89736 /* AppDelegate.swift in Sources */,
 				1867309A27D10CA300A89736 /* Constant.swift in Sources */,
 				1867307327D0F76B00A89736 /* searchViewController.swift in Sources */,
 				1867308627D1053B00A89736 /* HomeViewModel.swift in Sources */,
 				1867304727D0EED300A89736 /* MainNavigators.swift in Sources */,
+				1885B0D727D1D43000E77423 /* searchRouter.swift in Sources */,
 				186730C027D1156C00A89736 /* APIRouter.swift in Sources */,
 				186730CB27D115F400A89736 /* ResponseObject.swift in Sources */,
 				1867307D27D1023400A89736 /* BaseWireframe.swift in Sources */,

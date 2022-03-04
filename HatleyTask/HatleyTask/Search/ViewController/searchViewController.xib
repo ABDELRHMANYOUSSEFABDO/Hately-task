@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="searchViewController" customModule="HatleyTask" customModuleProvider="target">
             <connections>
+                <outlet property="listArtisTableView" destination="so3-7E-Tkm" id="LeL-Eu-hZM"/>
+                <outlet property="searchBar" destination="Spc-0t-QuO" id="V3x-F2-xc4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,14 +20,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Spc-0t-QuO">
+                    <rect key="frame" x="0.0" y="50" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="so3-7E-Tkm">
+                    <rect key="frame" x="0.0" y="106" width="414" height="756"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Spc-0t-QuO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0rc-KM-rau"/>
+                <constraint firstItem="Spc-0t-QuO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="5ZZ-jm-F1l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="so3-7E-Tkm" secondAttribute="bottom" id="A6a-Rc-Pe7"/>
+                <constraint firstItem="so3-7E-Tkm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WaH-BO-SrQ"/>
+                <constraint firstItem="so3-7E-Tkm" firstAttribute="top" secondItem="Spc-0t-QuO" secondAttribute="bottom" id="bw4-zb-Dsz"/>
+                <constraint firstItem="Spc-0t-QuO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="geb-5J-9zM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="so3-7E-Tkm" secondAttribute="trailing" id="sj0-hH-2CB"/>
+            </constraints>
             <point key="canvasLocation" x="70" y="105"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

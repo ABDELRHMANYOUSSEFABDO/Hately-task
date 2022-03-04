@@ -6,25 +6,31 @@
 //
 
 import UIKit
-
-class searchViewController: UIViewController {
-    var coordinator :Coordinator!
-
+import RxSwift
+import RxCocoa
+class searchViewController: BaseWireframe<serachViewModel> {
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var listArtisTableView: UITableView!  {
+        didSet{
+            self.listArtisTableView.register(UINib(nibName: SearchTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: SearchTableViewCell.identifier)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func bind(viewModel: serachViewModel) {
+        searchBar.rx.text.orEmpty
+            .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe( onNext : { quary in
+                viewModel.getlistArtis(name: quary)
+                
+            }).disposed(by: self.disposeBage)
+        viewModel.listArtisObsevable.bind(to: self.listArtisTableView.rx.items(cellIdentifier: SearchTableViewCell.identifier, cellType: SearchTableViewCell.self)){ (row, element, cell) in
+            cell.nameAritsLabel.text = element.name
+        }.disposed(by: self.disposeBage)
     }
-    */
-
 }

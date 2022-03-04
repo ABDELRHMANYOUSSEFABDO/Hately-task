@@ -12,7 +12,7 @@ import RxCocoa
 
 class NetworkClient {
     
-    func performRequest<T>(_ object: T.Type, router: APIRouter) -> Single<ResponseObject<T>> where T : Decodable {
+    func performRequest<T>(_ object: T.Type, router: APIRouter) -> Single<T> where T : Decodable {
         return Single.create { (observer) -> Disposable in
             print("=====\(router.urlRequest)")
             AF.request(router)
@@ -28,9 +28,9 @@ class NetworkClient {
                                 ⬇️ Response Body = \(String(data: data, encoding: String.Encoding.utf8) ?? "")
                                 """ )
                             
-                            let responseModel = try JSONDecoder().decode(ResponseObject<T>.self, from: response.data!)
+                            let responseModel = try JSONDecoder().decode(T.self, from: response.data!)
                             print("CompanyResponse",responseModel)
-                            let isResponseSuccessed = responseModel.success
+                            let isResponseSuccessed = responseModel
                             observer(.success(responseModel))
                             //observer(isResponseSuccessed ?.success(responseModel) :.failure(AppError(message: responseModel.message)))
                             return

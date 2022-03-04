@@ -17,6 +17,7 @@ class BaseWireframe<T>: UIViewController{
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind(viewModel: viewModel)
     }
     init(viewModel:T,coordinator:Coordinator) {
         
@@ -27,7 +28,7 @@ class BaseWireframe<T>: UIViewController{
         
     }
     func bind(viewModel:T){
-        
+        fatalError("Please override bind function")
     }
     required init?(coder: NSCoder) {
         fatalError("init")

@@ -9,15 +9,21 @@ import Foundation
 import UIKit
 protocol Coordinator {
     var  Main : MainNavigators { get}
+    var navigationController: UINavigationController { get}
+
     
 }
 class AppCoordinator: Coordinator{
+    var navigationController: UINavigationController
     let window : UIWindow
     lazy  var Main : MainNavigators = {
         return .init(coordinator: self)
     }()
-    init(window:UIWindow = UIWindow()) {
+  //  private  var navigationController: UINavigationController?
+   
+    init(window:UIWindow = UIWindow(),navigationController: UINavigationController = UINavigationController()) {
         self.window = window
+        self.navigationController = navigationController
     }
     func start(){
         window.rootViewController = rootViewController
