@@ -759,7 +759,7 @@
 		9BE9D100151EBDC44DD446393011F4CE /* DistinctUntilChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistinctUntilChanged.swift; path = RxSwift/Observables/DistinctUntilChanged.swift; sourceTree = "<group>"; };
 		9C7ABF02C7953FFF2094FE0CCAAC89A8 /* UIApplication+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Rx.swift"; path = "RxCocoa/iOS/UIApplication+Rx.swift"; sourceTree = "<group>"; };
 		9D45C64FECC8BE6869A77CCBE1F62033 /* RxRelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxRelay-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E24B8DE393351B8C6A6CD5997E3EDB2 /* Pods-HatleyTask.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HatleyTask.modulemap"; sourceTree = "<group>"; };
 		9E691FB224366D8F9F75D945F79FF0EA /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		9E7B175AF2BE0503CC8959AA1AA0018D /* Platform.Linux.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.Linux.swift; path = Platform/Platform.Linux.swift; sourceTree = "<group>"; };
@@ -786,7 +786,7 @@
 		AC07DB4AA889302C9D0CE6BD69EE0AC1 /* RxRelay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxRelay-Info.plist"; sourceTree = "<group>"; };
 		AC201A3E29FC67EED6E3BB3FF82D7088 /* SubscribeOn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubscribeOn.swift; path = RxSwift/Observables/SubscribeOn.swift; sourceTree = "<group>"; };
 		AC807B52C09CD4A3C282A470DF025E87 /* Pods-HatleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HatleyTask.release.xcconfig"; sourceTree = "<group>"; };
-		AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods-HatleyTask */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HatleyTask"; path = Pods_HatleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods_HatleyTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD067CC88C98E530EBDE03ED6333D654 /* SerialDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDisposable.swift; path = RxSwift/Disposables/SerialDisposable.swift; sourceTree = "<group>"; };
 		AD34FDA4A44A93727AFC9774DE2E477A /* BooleanDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BooleanDisposable.swift; path = RxSwift/Disposables/BooleanDisposable.swift; sourceTree = "<group>"; };
 		ADC91FEB997104C23A97432DB021653D /* WKWebView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+Rx.swift"; path = "RxCocoa/iOS/WKWebView+Rx.swift"; sourceTree = "<group>"; };
@@ -1241,7 +1241,6 @@
 				18750280AB2BA7270888CF5304E6D94A /* Zip+Collection.swift */,
 				5BDAEA04373E92E9AC79F314CD31A329 /* Support Files */,
 			);
-			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1313,7 +1312,6 @@
 				5116F2DC4901DA615BE3A0E9ED572C7A /* ViewTransition.swift */,
 				314CA4B7850EB340BE858F8321E8585A /* Support Files */,
 			);
-			name = RxDataSources;
 			path = RxDataSources;
 			sourceTree = "<group>";
 		};
@@ -1441,7 +1439,6 @@
 				ADC91FEB997104C23A97432DB021653D /* WKWebView+Rx.swift */,
 				B9E9BFA60329CB2EF1AAE8AFACC032B5 /* Support Files */,
 			);
-			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1455,7 +1452,6 @@
 				E28D632B18F3A2C216F7D8A0A99FE4DC /* Utils.swift */,
 				A7CA60940E97ECDE9975A4BD2E52DF9F /* Support Files */,
 			);
-			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -1492,7 +1488,6 @@
 				E434510AABE23BDB73E650514258A32D /* Utilities.swift */,
 				5BF385B417650E5D098E29795820AFBE /* Support Files */,
 			);
-			name = Differentiator;
 			path = Differentiator;
 			sourceTree = "<group>";
 		};
@@ -1591,7 +1586,6 @@
 				0A668C568EB36A55271BA08EF0E64ECE /* Validation.swift */,
 				24682688970DC1F8A698BA6253C9A8F8 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1600,7 +1594,7 @@
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				D51C3D0C53D23B97B032E3BDD4F82C82 /* Differentiator */,
-				AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods-HatleyTask */,
+				AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods_HatleyTask.framework */,
 				0833ABC0855F901DE3F6BA8B8F0AF948 /* Pods-HatleyTask-HatleyTaskUITests */,
 				239C97160447F755A94B31CE528BCE7C /* Pods-HatleyTaskTests */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
@@ -1777,7 +1771,7 @@
 			);
 			name = "Pods-HatleyTask";
 			productName = Pods_HatleyTask;
-			productReference = AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods-HatleyTask */;
+			productReference = AC80D7F9B312E69E8584FDB1F4FEF02B /* Pods_HatleyTask.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		401909D4FB2014BF539896BF0CCA48C2 /* RxDataSources */ = {

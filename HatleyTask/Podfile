@@ -16,6 +16,7 @@ target 'HatleyTask' do
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod  'Alamofire'
+  pod 'RealmSwift'
   target 'HatleyTaskUITests' do
     # Pods for testing
   end
