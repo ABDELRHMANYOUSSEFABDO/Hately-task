@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: BaseWireframe<HomeViewModel> {
-    var coordinator :Coordinator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +16,7 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
     }
 
     @IBAction func tabButton(_ sender: Any) {
+        coordinator.Main.ViewController(for: .search)
     }
     
 

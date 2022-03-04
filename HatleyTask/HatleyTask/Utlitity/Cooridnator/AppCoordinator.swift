@@ -25,6 +25,6 @@ class AppCoordinator: Coordinator{
     }
     var rootViewController : UIViewController{
         let viewModels = HomeViewModel()
-        return HomeViewController(viewModel: viewModels)
+        return HomeViewController(viewModel: viewModels, coordinator: self)
     }
 }

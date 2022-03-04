@@ -7,13 +7,26 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 class BaseWireframe<T>: UIViewController{
     let viewModel:  T
-    init(viewModel:T) {
+    var coordinator: Coordinator
+    lazy var disposeBage : DisposeBag = {
+        return DisposeBag()
+    }()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    init(viewModel:T,coordinator:Coordinator) {
         
         self.viewModel = viewModel
         //super.init(nibName: String(type(of: self)), bundle: nil)
+        self.coordinator = coordinator
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
+        
+    }
+    func bind(viewModel:T){
         
     }
     required init?(coder: NSCoder) {

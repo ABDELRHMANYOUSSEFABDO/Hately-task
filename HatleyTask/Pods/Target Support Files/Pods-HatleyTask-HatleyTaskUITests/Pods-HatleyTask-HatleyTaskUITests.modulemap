@@ -1,0 +1,6 @@
+framework module Pods_HatleyTask_HatleyTaskUITests {
+  umbrella header "Pods-HatleyTask-HatleyTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

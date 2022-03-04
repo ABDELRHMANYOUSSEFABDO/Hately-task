@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,16 @@
 		1867307427D0F76B00A89736 /* searchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867307227D0F76B00A89736 /* searchViewController.xib */; };
 		1867307D27D1023400A89736 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867307C27D1023400A89736 /* BaseWireframe.swift */; };
 		1867308627D1053B00A89736 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867308527D1053B00A89736 /* HomeViewModel.swift */; };
+		1867309A27D10CA300A89736 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867309927D10CA300A89736 /* Constant.swift */; };
+		186730AE27D1149400A89736 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730AD27D1149400A89736 /* NetworkClient.swift */; };
+		186730C027D1156C00A89736 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730BF27D1156C00A89736 /* APIRouter.swift */; };
+		186730C527D115B200A89736 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730C427D115B200A89736 /* FeedRouter.swift */; };
+		186730CB27D115F400A89736 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730CA27D115F400A89736 /* ResponseObject.swift */; };
+		186730D127D1164200A89736 /* FailureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730CF27D1164200A89736 /* FailureResponse.swift */; };
+		186730D227D1164200A89736 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186730D027D1164200A89736 /* ServiceError.swift */; };
+		1EB2A5B6CDB7490A9D450E14 /* Pods_HatleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92C7083D1DCB58DD0371D69 /* Pods_HatleyTask.framework */; };
+		DCC0A2DE831FE1F55250BCF3 /* Pods_HatleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */; };
+		E3DC2A3B32CE734476CBC71A /* Pods_HatleyTask_HatleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA27183C895162AC7776F16C /* Pods_HatleyTask_HatleyTaskUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,22 @@
 		1867307227D0F76B00A89736 /* searchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchViewController.xib; sourceTree = "<group>"; };
 		1867307C27D1023400A89736 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		1867308527D1053B00A89736 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1867309927D10CA300A89736 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		186730AD27D1149400A89736 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		186730BF27D1156C00A89736 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		186730C427D115B200A89736 /* FeedRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		186730CA27D115F400A89736 /* ResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		186730CF27D1164200A89736 /* FailureResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureResponse.swift; sourceTree = "<group>"; };
+		186730D027D1164200A89736 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA6B2A49790246F89B58338 /* Pods-HatleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-HatleyTaskTests/Pods-HatleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		59AA31C1BF5FCA743FEC97DF /* Pods-HatleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask.release.xcconfig"; path = "Target Support Files/Pods-HatleyTask/Pods-HatleyTask.release.xcconfig"; sourceTree = "<group>"; };
+		6E19F22E9FA28258B14347DF /* Pods-HatleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask.debug.xcconfig"; path = "Target Support Files/Pods-HatleyTask/Pods-HatleyTask.debug.xcconfig"; sourceTree = "<group>"; };
+		7157535DA9D29C21CC9D7DD9 /* Pods-HatleyTask-HatleyTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask-HatleyTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-HatleyTask-HatleyTaskUITests/Pods-HatleyTask-HatleyTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A92C7083D1DCB58DD0371D69 /* Pods_HatleyTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA27183C895162AC7776F16C /* Pods_HatleyTask_HatleyTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTask_HatleyTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1723EFF2A0FEEFFA8395142 /* Pods-HatleyTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-HatleyTaskTests/Pods-HatleyTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF68D321B316462ECF956564 /* Pods-HatleyTask-HatleyTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask-HatleyTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-HatleyTask-HatleyTaskUITests/Pods-HatleyTask-HatleyTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB2A5B6CDB7490A9D450E14 /* Pods_HatleyTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC0A2DE831FE1F55250BCF3 /* Pods_HatleyTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +110,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DC2A3B32CE734476CBC71A /* Pods_HatleyTask_HatleyTaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8F0CBCAC0231AFBEFA0D03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F22E9FA28258B14347DF /* Pods-HatleyTask.debug.xcconfig */,
+				59AA31C1BF5FCA743FEC97DF /* Pods-HatleyTask.release.xcconfig */,
+				7157535DA9D29C21CC9D7DD9 /* Pods-HatleyTask-HatleyTaskUITests.debug.xcconfig */,
+				DF68D321B316462ECF956564 /* Pods-HatleyTask-HatleyTaskUITests.release.xcconfig */,
+				C1723EFF2A0FEEFFA8395142 /* Pods-HatleyTaskTests.debug.xcconfig */,
+				4DA6B2A49790246F89B58338 /* Pods-HatleyTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		18672FFC27D0EC3B00A89736 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +137,8 @@
 				1867301E27D0EC3E00A89736 /* HatleyTaskTests */,
 				1867302927D0EC3E00A89736 /* HatleyTaskUITests */,
 				1867300627D0EC3B00A89736 /* Products */,
+				0E8F0CBCAC0231AFBEFA0D03 /* Pods */,
+				3390373E9931B09797A10E64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +155,8 @@
 		1867300727D0EC3B00A89736 /* HatleyTask */ = {
 			isa = PBXGroup;
 			children = (
+				186730AC27D1142000A89736 /* Network */,
+				1867309827D10CA300A89736 /* Constant */,
 				1867307B27D101D200A89736 /* Core */,
 				1867306F27D0F74E00A89736 /* Search */,
 				1867305727D0F1A100A89736 /* Home */,
@@ -226,6 +272,53 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1867309827D10CA300A89736 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				1867309927D10CA300A89736 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		186730AC27D1142000A89736 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				186730BE27D1156C00A89736 /* Protocols */,
+				186730AD27D1149400A89736 /* NetworkClient.swift */,
+				186730C927D115F400A89736 /* NetworkModels */,
+				186730C427D115B200A89736 /* FeedRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		186730BE27D1156C00A89736 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				186730BF27D1156C00A89736 /* APIRouter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		186730C927D115F400A89736 /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				186730CA27D115F400A89736 /* ResponseObject.swift */,
+				186730CF27D1164200A89736 /* FailureResponse.swift */,
+				186730D027D1164200A89736 /* ServiceError.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		3390373E9931B09797A10E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A92C7083D1DCB58DD0371D69 /* Pods_HatleyTask.framework */,
+				AA27183C895162AC7776F16C /* Pods_HatleyTask_HatleyTaskUITests.framework */,
+				37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1867302F27D0EC3E00A89736 /* Build configuration list for PBXNativeTarget "HatleyTask" */;
 			buildPhases = (
+				CEDEF5FF5A2F408D55CA97E1 /* [CP] Check Pods Manifest.lock */,
 				1867300127D0EC3B00A89736 /* Sources */,
 				1867300227D0EC3B00A89736 /* Frameworks */,
 				1867300327D0EC3B00A89736 /* Resources */,
+				4890EF3EABB7156AE2A90B1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1867303227D0EC3E00A89736 /* Build configuration list for PBXNativeTarget "HatleyTaskTests" */;
 			buildPhases = (
+				2EE9063ED717BD55BBAE78AE /* [CP] Check Pods Manifest.lock */,
 				1867301727D0EC3E00A89736 /* Sources */,
 				1867301827D0EC3E00A89736 /* Frameworks */,
 				1867301927D0EC3E00A89736 /* Resources */,
@@ -268,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1867303527D0EC3E00A89736 /* Build configuration list for PBXNativeTarget "HatleyTaskUITests" */;
 			buildPhases = (
+				A54216580F1DB275AB27CE7A /* [CP] Check Pods Manifest.lock */,
 				1867302227D0EC3E00A89736 /* Sources */,
 				1867302327D0EC3E00A89736 /* Frameworks */,
 				1867302427D0EC3E00A89736 /* Resources */,
+				2D14418F42A3A8E74BEC31BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,16 +450,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D14418F42A3A8E74BEC31BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HatleyTask-HatleyTaskUITests/Pods-HatleyTask-HatleyTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HatleyTask-HatleyTaskUITests/Pods-HatleyTask-HatleyTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HatleyTask-HatleyTaskUITests/Pods-HatleyTask-HatleyTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EE9063ED717BD55BBAE78AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HatleyTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4890EF3EABB7156AE2A90B1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HatleyTask/Pods-HatleyTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HatleyTask/Pods-HatleyTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HatleyTask/Pods-HatleyTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A54216580F1DB275AB27CE7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HatleyTask-HatleyTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEDEF5FF5A2F408D55CA97E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HatleyTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1867300127D0EC3B00A89736 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186730D227D1164200A89736 /* ServiceError.swift in Sources */,
+				186730C527D115B200A89736 /* FeedRouter.swift in Sources */,
 				1867303E27D0ED3B00A89736 /* AppCoordinator.swift in Sources */,
+				186730AE27D1149400A89736 /* NetworkClient.swift in Sources */,
+				186730D127D1164200A89736 /* FailureResponse.swift in Sources */,
 				1867300927D0EC3B00A89736 /* AppDelegate.swift in Sources */,
+				1867309A27D10CA300A89736 /* Constant.swift in Sources */,
 				1867307327D0F76B00A89736 /* searchViewController.swift in Sources */,
 				1867308627D1053B00A89736 /* HomeViewModel.swift in Sources */,
 				1867304727D0EED300A89736 /* MainNavigators.swift in Sources */,
+				186730C027D1156C00A89736 /* APIRouter.swift in Sources */,
+				186730CB27D115F400A89736 /* ResponseObject.swift in Sources */,
 				1867307D27D1023400A89736 /* BaseWireframe.swift in Sources */,
 				1867305B27D0F1C700A89736 /* HomeViewController.swift in Sources */,
 				1867305027D0EF4800A89736 /* Navigator.swift in Sources */,
@@ -529,6 +737,7 @@
 		};
 		1867303027D0EC3E00A89736 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E19F22E9FA28258B14347DF /* Pods-HatleyTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -548,6 +757,7 @@
 		};
 		1867303127D0EC3E00A89736 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59AA31C1BF5FCA743FEC97DF /* Pods-HatleyTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -567,6 +777,7 @@
 		};
 		1867303327D0EC3E00A89736 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1723EFF2A0FEEFFA8395142 /* Pods-HatleyTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -589,6 +800,7 @@
 		};
 		1867303427D0EC3E00A89736 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA6B2A49790246F89B58338 /* Pods-HatleyTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -611,6 +823,7 @@
 		};
 		1867303627D0EC3E00A89736 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7157535DA9D29C21CC9D7DD9 /* Pods-HatleyTask-HatleyTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -631,6 +844,7 @@
 		};
 		1867303727D0EC3E00A89736 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF68D321B316462ECF956564 /* Pods-HatleyTask-HatleyTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
