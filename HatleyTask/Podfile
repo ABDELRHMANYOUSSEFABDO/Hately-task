@@ -17,6 +17,7 @@ target 'HatleyTask' do
   pod 'RxDataSources'
   pod  'Alamofire'
   pod 'RealmSwift'
+  pod 'SDWebImage'
   target 'HatleyTaskUITests' do
     # Pods for testing
   end
