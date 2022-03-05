@@ -27,9 +27,7 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
         }).disposed(by: self.disposeBage)
         viewModel.getAlbum()
         viewModel.listAlbumObsevable.bind(to: self.albumCollectionView.rx.items(cellIdentifier: AlbumCollectionViewCell.identifier, cellType: AlbumCollectionViewCell.self)){ (row, element, cell) in
-            
             cell.nameAlbumLabel.text = element.name
-            
             cell.nameArtiesLabel.text = element.artist?.name
             var imageLink = ""
             if (!element.imageList.isEmpty){
@@ -52,7 +50,15 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
             }).disposed(by: cell.disposeBag)
             
         }.disposed(by: self.disposeBage)
+        Observable.zip(albumCollectionView.rx.itemSelected,albumCollectionView.rx.modelSelected(Album.self)).bind { [weak self]  selectedIndex, branch  in
+            if branch.mbid != nil{
+                self?.coordinator.Main.navigate(to: .detiles(id: branch.mbid, isDowload: true, album: branch))
+            }else{
+                print("NotMimd")
+            }
+        }.disposed(by: self.disposeBage)
+        
+       
     }
-    
-
+//
 }

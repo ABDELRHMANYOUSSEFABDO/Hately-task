@@ -70,7 +70,6 @@ class AlbumViewModel:BaseViewModel{
         if !album.imageList.isEmpty {
             album.image = album.imageList[0].imageLink
         }
-        print(" LOLO Add",album)
           let realm = try! Realm()
 
         try! realm.write {

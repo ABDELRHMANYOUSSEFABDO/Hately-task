@@ -35,6 +35,7 @@ class NetworkClient {
                             //observer(isResponseSuccessed ?.success(responseModel) :.failure(AppError(message: responseModel.message)))
                             return
                         } catch let error{
+                            print("CompanyResponse",error)
                             observer(.failure(error))
                             return
                         }

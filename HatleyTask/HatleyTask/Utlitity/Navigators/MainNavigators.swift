@@ -13,6 +13,7 @@ class MainNavigators:Navigator {
     
     enum Destionation {
         case search
+        case detiles(id:String,isDowload:Bool = false,album:Album)
     }
     required init(coordinator:Coordinator){
         self.coordinator = coordinator
@@ -23,6 +24,11 @@ class MainNavigators:Navigator {
             let viewmodel  = AlbumViewModel()
             let View = AlbumViewController(viewModel: viewmodel, coordinator: coordinator)
             return View
+        case let .detiles(id,isDowload,album) :
+            let viewmodel = DetilesAlbumViewModel(id: id, isDowload: isDowload,album: album)
+            let View = DetilesAlbumViewController(viewModel: viewmodel, coordinator: coordinator)
+            return View
+            
         default:
             break
         }

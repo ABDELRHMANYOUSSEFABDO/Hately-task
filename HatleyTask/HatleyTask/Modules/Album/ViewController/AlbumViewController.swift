@@ -26,9 +26,7 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
     override func bind(viewModel: AlbumViewModel) {
         viewModel.getAlbum(id: id)
         viewModel.listAlbumObsevable.bind(to: self.albumCollectionView.rx.items(cellIdentifier: AlbumCollectionViewCell.identifier, cellType: AlbumCollectionViewCell.self)){ (row, element, cell) in
-            
             cell.nameAlbumLabel.text = element.name
-            
             cell.nameArtiesLabel.text = element.artist?.name
             var imageLink = ""
             if (!element.imageList.isEmpty){
