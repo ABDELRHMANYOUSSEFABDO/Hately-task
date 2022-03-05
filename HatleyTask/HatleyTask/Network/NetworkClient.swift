@@ -14,7 +14,6 @@ class NetworkClient {
     
     func performRequest<T>(_ object: T.Type, router: APIRouter) -> Single<T> where T : Decodable {
         return Single.create { (observer) -> Disposable in
-            print("=====\(router.urlRequest)")
             AF.request(router)
                 .validate()
                 .responseJSON{ (response) in
@@ -22,20 +21,12 @@ class NetworkClient {
                     case .success:
                         do {
                             guard let data = response.data else { return }
-                            PrintHelper.logNetwork("""
-                                ✅ Response: \(response.request?.httpMethod?.uppercased() ?? "") '\(router.urlRequest)':
-                                🧾 Status Code: \(response.response?.statusCode ?? 0), 💾 \(data), ⏳ time: \(Date().timeIntervalSince(Date()))
-                                ⬇️ Response Body = \(String(data: data, encoding: String.Encoding.utf8) ?? "")
-                                """ )
-                            
+                        
                             let responseModel = try JSONDecoder().decode(T.self, from: response.data!)
-                            print("CompanyResponse",responseModel)
-                            let isResponseSuccessed = responseModel
                             observer(.success(responseModel))
                             //observer(isResponseSuccessed ?.success(responseModel) :.failure(AppError(message: responseModel.message)))
                             return
                         } catch let error{
-                            print("CompanyResponse",error)
                             observer(.failure(error))
                             return
                         }
@@ -51,7 +42,6 @@ class NetworkClient {
                                         observer(.failure(AppError(message: "")))
                                         return
                                     }
-                                   // print("No InterNet ConnetionEroors",errors.values[0])
 
                                     observer(.failure(AppError(message: errors.name[0] )))
                                     return
@@ -66,24 +56,11 @@ class NetworkClient {
                                 }
                             }
                         }
-                        print("No InterNet Connetion Network Client")
                         observer(.failure(AppError(message: "No internet connection")))
                     }
                 }.resume()
             return Disposables.create()
         }
     }
-
-
-class PrintHelper {
-    
-    static func logNetwork<T>(_ items: T, separator: String = " ", terminator: String = "\n") {
-        print("""
-            \n===================== 📟 ⏳ 📡 =========================
-            \(items)
-            ======================= 🚀 ⌛️ 📡 =========================
-            """, separator: separator, terminator: terminator)
-    }
-}
 
 }

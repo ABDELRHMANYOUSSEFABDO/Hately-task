@@ -15,10 +15,8 @@ class AlbumViewModel:BaseViewModel{
     private var listAlbum = BehaviorRelay<[Album]>(value: [])
     var listAlbumObsevable : Observable <[Album]> {
         return listAlbum.asObservable()
-        
     }
     private var id = ""
-  
     init(id:String){
         self.id = id
     }
@@ -38,19 +36,19 @@ class AlbumViewModel:BaseViewModel{
                     self.listAlbum.accept(albums)
                     return
                 }
-                var mergedAlbums:[Album] = []
-
+                
+                // used  to merge Data from Api and Realm
                 for (index,serverAlbum) in albums.enumerated(){
                     localArray.forEach{ localAlbum in
                         if(serverAlbum.name == localAlbum.name){
-                             albums = albums.filter{$0.name != localAlbum.name}
+                            albums = albums.filter{$0.name != localAlbum.name}
                             albums.insert(localAlbum, at: index)
                         }
-                }
-                   
+                    }
+                    
                 }
                 self.listAlbum.accept(albums)
-            case .failure(let e):
+            case .failure(_):
                 break
             }
         }.disposed(by: disposeBag)
@@ -60,13 +58,13 @@ class AlbumViewModel:BaseViewModel{
         let albumsFromServer = listAlbum.value
         
         var alb =  albumsFromServer
-        
+            
             .filter{$0.name != album.name} // mbid is not unique and most of time is nil
-
+        
         alb.insert(newAlbum, at: index)
         newAlbum.isDonwloaded ? save(album: newAlbum) : remove(album: album)
         self.listAlbum.accept(alb)
-
+        
     }
     
     private func save(album:Album) {
@@ -74,35 +72,25 @@ class AlbumViewModel:BaseViewModel{
         if !album.imageList.isEmpty {
             album.image = album.imageList[0].imageLink
         }
-          let realm = try! Realm()
-
+        let realm = try! Realm()
+        
         try! realm.write {
             realm.add(album, update: .modified)
         }
-        getAlbums()
+        
     }
     private func remove(album:Album){
-        print(" LOLO Remove",album)
         let realm = try! Realm()
-
-        
         try? realm.write {
             realm.delete(album)
         }
-
+        
     }
-    private func getAlbums()->[Album]{
-        guard  let albmus = try?  Realm().objects(Album.self).toArray(ofType: Album.self) as [Album]else{
-            return []
-        }
-        print("All Local Albmus",albmus)
-        return albmus
-    }
+    
     private func getArrayFromRealm<T:Object>(type:T.Type)->[T]{
         guard  let albmus = try?  Realm().objects(T.self).toArray(ofType: T.self) as [T]else{
             return []
         }
-        print("All Albmus",albmus)
         return albmus
     }
 }

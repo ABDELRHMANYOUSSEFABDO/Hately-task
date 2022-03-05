@@ -37,7 +37,7 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
            
             let imageURl = URL(string: imageLink)
 
-            cell.imageAlbum.sd_setImage(with: imageURl, placeholderImage: #imageLiteral(resourceName: "heart_gray_icon"),options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in
+            cell.imageAlbum.sd_setImage(with: imageURl, placeholderImage: #imageLiteral(resourceName: "Hatley"),options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in
                 // your rest code
            })
             let imageButton = element.isDonwloaded ? #imageLiteral(resourceName: "heart_fill_icon") : #imageLiteral(resourceName: "heart_gray_icon")
@@ -48,25 +48,14 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
             }).disposed(by: cell.disposeBag)
             
         }.disposed(by: self.disposeBage)
+        
         Observable.zip(albumCollectionView.rx.itemSelected,albumCollectionView.rx.modelSelected(Album.self)).bind { [weak self]  selectedIndex, branch  in
             if branch.mbid != nil{
                 self?.coordinator.Main.navigate(to: .detiles(id: branch.mbid, isDowload: branch.isDonwloaded, album: branch))
             }else{
-                print("NotMimd")
+               
             }
         }.disposed(by: self.disposeBage)
         
-    }
-}
-extension Results {
-    func toArray<T>(ofType: T.Type) -> [T] {
-        var array = [T]()
-        for i in 0 ..< count {
-            if let result = self[i] as? T {
-                array.append(result)
-            }
-        }
-
-        return array
     }
 }

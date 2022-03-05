@@ -14,7 +14,6 @@ class serachViewModel:BaseViewModel{
     private (set) var listArtis = PublishSubject<[Artist]>()
     var listArtisObsevable : Observable <[Artist]> {
         return listArtis
-
     }
     func getlistArtis(name:String){
         self.networkClient.performRequest(search.self, router: searchRouter.searh(name: name)).subscribe{

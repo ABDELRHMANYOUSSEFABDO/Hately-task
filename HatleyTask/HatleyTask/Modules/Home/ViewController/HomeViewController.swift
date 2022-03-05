@@ -41,7 +41,7 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
            
             let imageURl = URL(string: imageLink)
 
-            cell.imageAlbum.sd_setImage(with: imageURl, placeholderImage: #imageLiteral(resourceName: "heart_gray_icon"),options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in
+            cell.imageAlbum.sd_setImage(with: imageURl, placeholderImage: #imageLiteral(resourceName: "Hatley"),options: SDWebImageOptions(rawValue: 0), completed: { image, error, cacheType, imageURL in
                 // your rest code
            })
             let imageButton =  #imageLiteral(resourceName: "heart_fill_icon")
@@ -56,7 +56,10 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
             if branch.mbid != nil{
                 self?.coordinator.Main.navigate(to: .detiles(id: branch.mbid, isDowload: true, album: branch))
             }else{
-                print("NotMimd")
+               //u sed that Because not have mbid and Not get Any Data
+                let alert = UIAlertController(title: "Alert", message: "Not Have tracks List ", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
             }
         }.disposed(by: self.disposeBage)
         

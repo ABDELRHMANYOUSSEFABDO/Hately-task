@@ -1,8 +1,8 @@
 //
 //  CollectionViewCell+Extension.swift
-//  KadabraDigital
+//  HatleyTask
 //
-//  Created by Mahmoud Alaa on 12/02/2021.
+//  Created by Apple on 3/4/22.
 //
 
 import UIKit

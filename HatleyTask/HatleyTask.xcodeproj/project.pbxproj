@@ -49,6 +49,7 @@
 		18E7212127D36BFF00C543A0 /* DetilesAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7212027D36BFF00C543A0 /* DetilesAlbumViewModel.swift */; };
 		18E7212D27D3713200C543A0 /* DetilesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7212C27D3713200C543A0 /* DetilesModel.swift */; };
 		18E7213227D374AA00C543A0 /* detilesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7213127D374AA00C543A0 /* detilesRouter.swift */; };
+		18E721C927D3D8E100C543A0 /* Extion+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E721C827D3D8E100C543A0 /* Extion+Realm.swift */; };
 		1EB2A5B6CDB7490A9D450E14 /* Pods_HatleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92C7083D1DCB58DD0371D69 /* Pods_HatleyTask.framework */; };
 		DCC0A2DE831FE1F55250BCF3 /* Pods_HatleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */; };
 		E3DC2A3B32CE734476CBC71A /* Pods_HatleyTask_HatleyTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA27183C895162AC7776F16C /* Pods_HatleyTask_HatleyTaskUITests.framework */; };
@@ -120,6 +121,7 @@
 		18E7212027D36BFF00C543A0 /* DetilesAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetilesAlbumViewModel.swift; sourceTree = "<group>"; };
 		18E7212C27D3713200C543A0 /* DetilesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetilesModel.swift; sourceTree = "<group>"; };
 		18E7213127D374AA00C543A0 /* detilesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detilesRouter.swift; sourceTree = "<group>"; };
+		18E721C827D3D8E100C543A0 /* Extion+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extion+Realm.swift"; sourceTree = "<group>"; };
 		37B53DCD81BF1A410E402955 /* Pods_HatleyTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatleyTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA6B2A49790246F89B58338 /* Pods-HatleyTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTaskTests.release.xcconfig"; path = "Target Support Files/Pods-HatleyTaskTests/Pods-HatleyTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		59AA31C1BF5FCA743FEC97DF /* Pods-HatleyTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatleyTask.release.xcconfig"; path = "Target Support Files/Pods-HatleyTask/Pods-HatleyTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,12 +199,10 @@
 		1867300727D0EC3B00A89736 /* HatleyTask */ = {
 			isa = PBXGroup;
 			children = (
-				18B6E5F827D2845E00EE67DA /* Base */,
-				1885B10127D2357D00E77423 /* Modules */,
-				1885B0EC27D2313200E77423 /* Extention */,
-				186730AC27D1142000A89736 /* Network */,
-				1867309827D10CA300A89736 /* Constant */,
 				1867307B27D101D200A89736 /* Core */,
+				1885B10127D2357D00E77423 /* Modules */,
+				186730AC27D1142000A89736 /* Network */,
+				1885B0EC27D2313200E77423 /* Extention */,
 				1867303B27D0ECBD00A89736 /* Utlitity */,
 				1867300827D0EC3B00A89736 /* AppDelegate.swift */,
 				1867301127D0EC3D00A89736 /* Assets.xcassets */,
@@ -233,6 +233,7 @@
 		1867303B27D0ECBD00A89736 /* Utlitity */ = {
 			isa = PBXGroup;
 			children = (
+				1867309827D10CA300A89736 /* Constant */,
 				1867304E27D0EF1200A89736 /* Protocols */,
 				1867304527D0EE9F00A89736 /* Navigators */,
 				1867303C27D0ECD400A89736 /* Cooridnator */,
@@ -306,7 +307,7 @@
 		1867307B27D101D200A89736 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1867307C27D1023400A89736 /* BaseWireframe.swift */,
+				18B6E5F827D2845E00EE67DA /* Base */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -396,6 +397,7 @@
 			children = (
 				1885B12F27D2598300E77423 /* UICollectionViewCell+Extension.swift */,
 				1885B0ED27D2315700E77423 /* UITableViewCell.swift */,
+				18E721C827D3D8E100C543A0 /* Extion+Realm.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				18B6E5F927D2846B00EE67DA /* BaseViewModel.swift */,
+				1867307C27D1023400A89736 /* BaseWireframe.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				1885B0EE27D2315700E77423 /* UITableViewCell.swift in Sources */,
 				1885B0F827D2320000E77423 /* SearchTableViewCell.swift in Sources */,
 				1885B0A527D1CAAB00E77423 /* HomeModel.swift in Sources */,
+				18E721C927D3D8E100C543A0 /* Extion+Realm.swift in Sources */,
 				1885B0D127D1D13200E77423 /* searchViewModel.swift in Sources */,
 				186730D127D1164200A89736 /* FailureResponse.swift in Sources */,
 				1885B10627D2360E00E77423 /* AlbumViewController.swift in Sources */,
