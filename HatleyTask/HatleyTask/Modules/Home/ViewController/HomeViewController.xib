@@ -22,15 +22,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BII-eJ-2Io">
-                    <rect key="frame" x="344" y="30" width="50" height="50"/>
+                    <rect key="frame" x="344" y="56" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="SoX-xP-FE0"/>
                         <constraint firstAttribute="height" constant="50" id="ce7-Cy-8wz"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Search"/>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-DF-aQw">
-                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <rect key="frame" x="0.0" y="118" width="414" height="744"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YEf-Uo-ZYZ">
                         <size key="itemSize" width="128" height="128"/>
@@ -41,13 +41,13 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="BII-eJ-2Io" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="7VC-cj-TZs"/>
                 <constraint firstItem="aTb-DF-aQw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BCa-bA-trJ"/>
                 <constraint firstItem="aTb-DF-aQw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jfv-KY-kT0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BII-eJ-2Io" secondAttribute="trailing" constant="20" id="RLA-zx-NWX"/>
                 <constraint firstItem="aTb-DF-aQw" firstAttribute="top" secondItem="BII-eJ-2Io" secondAttribute="bottom" constant="12" id="Zn0-z6-lFt"/>
-                <constraint firstItem="BII-eJ-2Io" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="wgq-hE-GUR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aTb-DF-aQw" secondAttribute="bottom" id="yYj-mk-FI1"/>
             </constraints>
             <point key="canvasLocation" x="69.565217391304358" y="105.80357142857143"/>
@@ -56,9 +56,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

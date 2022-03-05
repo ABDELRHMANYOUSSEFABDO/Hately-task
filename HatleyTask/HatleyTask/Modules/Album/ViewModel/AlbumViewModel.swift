@@ -17,8 +17,12 @@ class AlbumViewModel:BaseViewModel{
         return listAlbum.asObservable()
         
     }
-    let reloadData = PublishSubject<Void>()
-    func getAlbum(id:String){
+    private var id = ""
+  
+    init(id:String){
+        self.id = id
+    }
+    func getAlbum(){
         let localArray = getArrayFromRealm(type: Album.self)
         self.networkClient.performRequest(MainModelClass.self, router: albumRouter.album(id: id)).subscribe{
             switch $0{
@@ -75,7 +79,7 @@ class AlbumViewModel:BaseViewModel{
         try! realm.write {
             realm.add(album, update: .modified)
         }
-        getAlbum()
+        getAlbums()
     }
     private func remove(album:Album){
         print(" LOLO Remove",album)
@@ -87,7 +91,7 @@ class AlbumViewModel:BaseViewModel{
         }
 
     }
-    private func getAlbum()->[Album]{
+    private func getAlbums()->[Album]{
         guard  let albmus = try?  Realm().objects(Album.self).toArray(ofType: Album.self) as [Album]else{
             return []
         }

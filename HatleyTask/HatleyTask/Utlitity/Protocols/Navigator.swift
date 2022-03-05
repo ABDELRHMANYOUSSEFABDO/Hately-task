@@ -16,6 +16,6 @@ protocol Navigator {
 extension Navigator{
     func navigate(to destionation :Destionation ){
         let viewController = self.ViewController(for: destionation)
-        coordinator.navigationController.present(viewController, animated: true, completion: nil)
+        coordinator.navigationController.pushViewController(viewController, animated: true)
     }
 }

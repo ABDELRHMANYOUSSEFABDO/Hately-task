@@ -19,7 +19,9 @@ class HomeViewController: BaseWireframe<HomeViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         }
-
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.getAlbum()
+    }
     override func bind(viewModel: HomeViewModel) {
         searchButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.coordinator.Main.navigate(to: .search)

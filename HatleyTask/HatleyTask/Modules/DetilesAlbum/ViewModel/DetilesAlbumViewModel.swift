@@ -44,21 +44,17 @@ class DetilesAlbumViewModel:BaseViewModel{
      func save() {
         let realm = try! Realm()
         try! realm.write {
-            print("HHH",album.isDonwloaded)
             album.isDonwloaded = !isDownloadicon.value
             realm.add(album,update: .modified)
-            
         }
     }
      func remove(){
-       
         let realm = try! Realm()
         try! realm.write{
-            print("HHH2",album.isDonwloaded)
             album.isDonwloaded = !isDownloadicon.value
             realm.add(album,update: .modified)
         }
-       // print("HiiABDO",albumSave)
+     
     }
 
 }

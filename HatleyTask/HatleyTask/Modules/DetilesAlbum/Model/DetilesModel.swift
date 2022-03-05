@@ -18,6 +18,7 @@ struct AlbumDetiles: Codable {
     let image: [ImageDetiles]?
     let tracks: Tracks?
     let url: String?
+    let name: String?
 }
 struct ImageDetiles: Codable {
     let text: String?
@@ -29,11 +30,24 @@ struct ImageDetiles: Codable {
 }
 
 
-// MARK: - Tag
-
 // MARK: - Tracks
 struct Tracks: Codable {
-    let track: [Track]?
+    let track: [Track]
+    
+    enum CodingKeys: String, CodingKey {
+        case track
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        if let track = try? container.decode(Track.self, forKey: .track) {
+            self.track = [track]
+        } else if let tracks = try? container.decode([Track].self, forKey: .track) {
+            self.track = tracks
+        } else {
+            self.track = []
+        }
+    }
 }
 
 // MARK: - Track

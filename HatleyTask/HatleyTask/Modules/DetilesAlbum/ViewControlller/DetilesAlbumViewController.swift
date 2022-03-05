@@ -28,7 +28,7 @@ class DetilesAlbumViewController:BaseWireframe<DetilesAlbumViewModel> {
             cell.nameAritsLabel.text = element.name
         }.disposed(by: self.disposeBage)
         viewModel.listAlbumObsevable.subscribe( { [weak self] elment in
-            self?.nameAlbum.text = elment.element?.artist
+            self?.nameAlbum.text = elment.element?.name
             self?.nameArties.text = elment.element?.artist
             let imageUrl = URL(string: elment.element?.image?[0].text ?? "")
            

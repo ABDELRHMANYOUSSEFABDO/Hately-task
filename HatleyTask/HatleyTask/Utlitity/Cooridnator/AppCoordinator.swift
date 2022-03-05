@@ -33,7 +33,7 @@ class AppCoordinator: Coordinator{
         let viewModels = HomeViewModel()
         let home =   HomeViewController(viewModel: viewModels, coordinator: self)
         let navController = UINavigationController(rootViewController: home)
-        navController.navigationBar.isHidden = true
+//        navController.navigationBar.isHidden = true
         self.navigationController = navController
         return navController
     }

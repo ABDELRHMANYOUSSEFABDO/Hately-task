@@ -16,15 +16,14 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
             self.albumCollectionView.register(UINib(nibName: AlbumCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: AlbumCollectionViewCell.identifier)
         }
     }
-    var id: String = "e520459c-dff4-491d-a6e4-c97be35e0044"
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.reloadData.subscribe(onNext:{ _ in
-            self.albumCollectionView.reloadData()
-        }).disposed(by: viewModel.disposeBag)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.getAlbum()
     }
     override func bind(viewModel: AlbumViewModel) {
-        viewModel.getAlbum(id: id)
+        viewModel.getAlbum()
         viewModel.listAlbumObsevable.bind(to: self.albumCollectionView.rx.items(cellIdentifier: AlbumCollectionViewCell.identifier, cellType: AlbumCollectionViewCell.self)){ (row, element, cell) in
             cell.nameAlbumLabel.text = element.name
             cell.nameArtiesLabel.text = element.artist?.name
@@ -49,38 +48,16 @@ class AlbumViewController: BaseWireframe<AlbumViewModel> {
             }).disposed(by: cell.disposeBag)
             
         }.disposed(by: self.disposeBage)
+        Observable.zip(albumCollectionView.rx.itemSelected,albumCollectionView.rx.modelSelected(Album.self)).bind { [weak self]  selectedIndex, branch  in
+            if branch.mbid != nil{
+                self?.coordinator.Main.navigate(to: .detiles(id: branch.mbid, isDowload: branch.isDonwloaded, album: branch))
+            }else{
+                print("NotMimd")
+            }
+        }.disposed(by: self.disposeBage)
         
     }
-    
-    private func getArrayFromRealm<T:Object>(type:T.Type)->[T]{
-        guard  let albmus = try?  Realm().objects(T.self).toArray(ofType: T.self) as [T]else{
-            return []
-        }
-        print("All Albmus",albmus)
-        return albmus
-    }
-    private func getAlbum()->[Album]{
-        guard  let albmus = try?  Realm().objects(Album.self).toArray(ofType: Album.self) as [Album]else{
-            return []
-        }
-        print("All Albmus",albmus)
-        return albmus
-    }
-    private func save(album:Album) {
-        let realm = try! Realm()
-
-        try! realm.write {
-            realm.add(album)
-        }
-    }
-    private func remove(album:Album){
-        let realm = try! Realm()
-        try! realm.write{
-            realm.delete(album)
-        }
-    }
 }
-
 extension Results {
     func toArray<T>(ofType: T.Type) -> [T] {
         var array = [T]()

@@ -8,12 +8,10 @@
 import Foundation
 import RxSwift
 
-class serachViewModel{
+class serachViewModel:BaseViewModel{
     private var networkClient = NetworkClient()
-    //  var  searchArtis = BehaviorSubject<String>(value: "")
-    private(set)  var searchArtis = ""
-
-    private var listArtis = PublishSubject<[Artist]>()
+    
+    private (set) var listArtis = PublishSubject<[Artist]>()
     var listArtisObsevable : Observable <[Artist]> {
         return listArtis
 
@@ -27,6 +25,6 @@ class serachViewModel{
             case .failure(_):
                 break
             }
-        }
+        }.disposed(by: disposeBag )
     }
 }

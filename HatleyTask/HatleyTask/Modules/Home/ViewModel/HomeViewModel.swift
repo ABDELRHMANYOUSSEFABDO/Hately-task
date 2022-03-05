@@ -18,12 +18,10 @@ class HomeViewModel {
         guard  let albmus = try?  Realm().objects(Album.self).filter("isDonwloaded = 1").toArray(ofType: Album.self) as [Album]else{
             return []
         }
-        print("All Local Albmus",albmus)
         listAlbum.accept(albmus)
         return albmus
     }
     func remove(album:Album){
-        print(" LOLO Remove",album)
         let realm = try! Realm()
 
         

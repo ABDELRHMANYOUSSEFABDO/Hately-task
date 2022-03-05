@@ -19,6 +19,7 @@ class BaseWireframe<T>: UIViewController{
         super.viewDidLoad()
         bind(viewModel: viewModel)
     }
+    
     init(viewModel:T,coordinator:Coordinator) {
         
         self.viewModel = viewModel
