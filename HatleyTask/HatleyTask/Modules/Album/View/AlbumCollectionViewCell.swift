@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import RxSwift
 class AlbumCollectionViewCell: UICollectionViewCell {
-
+    var disposeBag = DisposeBag()
     @IBOutlet var storeButton: UIButton!
     @IBOutlet var nameArtiesLabel: UILabel!
     @IBOutlet var nameAlbumLabel: UILabel!
@@ -17,5 +17,10 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
        
     }
-
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
+    
+    
 }

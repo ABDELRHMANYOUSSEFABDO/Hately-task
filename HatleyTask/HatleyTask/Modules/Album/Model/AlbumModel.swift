@@ -15,28 +15,45 @@ class Topalbums : Object, Codable{
 
 }
 class Album: Object, Codable {
-    @objc dynamic var mbid : String? = ""
-    @objc dynamic var name : String? = ""
-    @objc dynamic var url : String? = ""
+    @objc dynamic var mbid : String! = ""
+    @objc dynamic var name : String! = ""
+    @objc dynamic var url : String! = ""
+    @objc dynamic var isDonwloaded = false
     @objc dynamic var artist : ArtistClass?
     var imageList : [ImageAlbum] = []
-    @objc dynamic  var image:String? {
-        if imageList.isEmpty {
-            return ""
-        }
-        return imageList[0].imageLink ?? ""
+    @objc dynamic  var image:String?  = ""
+    override init() {
+        super.init()
+    }
+    init(id:String?,name:String,url:String,isDowload:Bool,aritst:ArtistClass?,imageList:[ImageAlbum]){
+        super.init()
+        self.mbid = id
+        self.name = name
+        self.url = url
+        self.isDonwloaded = isDowload
+        self.artist = aritst
+        self.imageList = imageList
+    }
+    override class func primaryKey() -> String? {
+        return "name"
     }
     enum CodingKeys: String, CodingKey {
         case artist
         case imageList = "image"
+        case mbid,name,url
     }
 }
 
 class ArtistClass: Object, Codable {
-    @objc dynamic var mbid : String?
-    @objc dynamic var name : String?
+    @objc dynamic var mbid : String = ""
+    @objc dynamic var name : String? = ""
     @objc dynamic var url : String?
-
+    enum CodingKeys: String, CodingKey {
+        case mbid,name,url
+    }
+    override class func primaryKey() -> String? {
+        return "name"
+    }
 }
 class ImageAlbum: Codable {
       var imageLink: String?
